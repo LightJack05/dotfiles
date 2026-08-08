@@ -4,6 +4,7 @@
   imports = [
     ./packages.nix
     ./zsh/zsh.nix
+    ./tmux/tmux.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's
