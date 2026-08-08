@@ -59,6 +59,16 @@ in
           . /etc/profile.d/nix.sh
         fi
 
+        # Make zsh completions from nix packages discoverable before grml runs
+        # compinit. mkShell adds each package's share/ to XDG_DATA_DIRS, so this
+        # picks up both global (~/.nix-profile) tools and whatever the active
+        # `nix develop` shell provides (talosctl, kind, velero, argocd, ...).
+        typeset -U fpath
+        for _d in ''${(s.:.)XDG_DATA_DIRS}; do
+          [[ -d $_d/zsh/site-functions ]] && fpath+=$_d/zsh/site-functions
+        done
+        unset _d
+
         source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
       '')
 
@@ -80,8 +90,11 @@ in
           zstyle ':prompt:grml-chroot:left:setup' items grml-chroot user at host path nix-shell percent
         fi
 
-        # --- tool completions (carry-over; drop each as its tool moves to nix) ---
-        for _f in ${./completions}/*.sh; do . "$_f"; done; unset _f
+        # --- completions for tools that ship none in their nix package ---
+        # Generated at runtime; guarded so they only run when the binary is
+        # actually on PATH (i.e. inside a dev shell that provides it).
+        if (( ''${+commands[kubectl]} )); then source <(kubectl completion zsh); fi
+        if (( ''${+commands[podman]} )); then source <(podman completion zsh); fi
       '')
     ];
   };
