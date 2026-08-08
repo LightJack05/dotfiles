@@ -3,6 +3,7 @@
 {
   imports = [
     ./packages.nix
+    ./zsh/zsh.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's
