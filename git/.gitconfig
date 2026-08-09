@@ -27,8 +27,5 @@
 	helper = !tea login helper
 [core]
 	editor = nvim
-[credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
-
 [checkout]
     defaultRemote=origin
