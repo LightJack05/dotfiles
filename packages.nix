@@ -34,6 +34,7 @@ in
       wofi
       hyprlock
       hyprpicker
+      hyprpolkitagent
       thunar
       tumbler
       firefox
