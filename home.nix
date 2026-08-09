@@ -5,7 +5,13 @@
     ./packages.nix
     ./zsh/zsh.nix
     ./tmux/tmux.nix
+    ./tmux-scripts/tmux-scripts.nix
     ./nvim/nvim.nix
+    ./kitty/kitty.nix
+    ./snx/snx.nix
+    ./swaync/swaync.nix
+    ./waybar/waybar.nix
+    ./wofi/wofi.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's

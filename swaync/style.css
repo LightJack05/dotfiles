@@ -1,0 +1,135 @@
+* {
+  all: unset;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #cdd6f4;
+  transition: 200ms ease-in-out;
+}
+
+/* Blank window behind control center */
+.blank-window {
+  background-color: transparent;
+}
+
+/* Base Panel & Floating Notification Background */
+.control-center,
+.floating-notifications.background .notification-row .notification-background {
+  background-color: rgba(32, 32, 32, 0.4);
+  border: 2px solid rgba(32, 32, 32, 0.2);
+  border-radius: 12.6px;
+  margin: 18px;
+}
+
+.control-center {
+  padding: 14px;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  padding: 0;
+}
+
+/* Notification Cards */
+.control-center .notification-background {
+  background-color: rgba(45, 45, 45, 0.4);
+  border: 2px solid rgba(32, 32, 32, 0.2);
+  border-radius: 7px;
+  margin-top: 14px;
+}
+
+.notification {
+  padding: 7px;
+}
+
+/* Typography Specifics */
+.summary {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.time {
+  color: #a6adc8;
+}
+
+/* Generalized Buttons (Applies globally to all current and future widgets) */
+button,
+.notification-action {
+  background-color: rgba(45, 45, 45, 0.4);
+  border: 2px solid rgba(32, 32, 32, 0.2);
+  border-radius: 7px;
+  padding: 6px 12px;
+  margin: 4px;
+}
+
+button:hover,
+.notification-action:hover,
+.control-center .notification-background:hover {
+  background-color: rgba(64, 64, 64, 0.3);
+  color: #f5e0dc; /* Rosewater highlight */
+  border-color: rgba(32, 32, 32, 0.4);
+}
+
+button:active,
+.notification-action:active {
+  background-color: #74c7ec;
+  color: #1e1e2e;
+}
+
+/* Close Buttons */
+.close-button {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+  border-radius: 6px;
+  margin: 7px;
+  padding: 2px 6px;
+}
+
+.close-button:hover {
+  background-color: #eba0ac;
+}
+
+.close-button:active {
+  background-color: #ff5555;
+}
+
+/* Sliders, Troughs, and Progress Bars */
+trough {
+  background-color: rgba(32, 32, 32, 0.4);
+  border-radius: 8px;
+  min-height: 8px;
+  min-width: 70px;
+  margin: 0 1rem;
+}
+
+trough highlight,
+progress {
+  background-color: #89b4fa;
+  border-radius: 8px;
+}
+
+.notification.critical progress {
+  background-color: #f38ba8;
+}
+
+/* Widgets General */
+.widget-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* Do Not Disturb Toggle */
+.widget-dnd > switch {
+  background-color: rgba(45, 45, 45, 0.4);
+  border: 2px solid rgba(32, 32, 32, 0.2);
+  border-radius: 8px;
+}
+
+.widget-dnd > switch:checked {
+  background-color: rgba(64, 64, 64, 0.3);
+}
+
+.widget-dnd > switch slider {
+  background-color: #cdd6f4;
+  border-radius: 8px;
+  border: 1px solid rgba(32, 32, 32, 0.2);
+}

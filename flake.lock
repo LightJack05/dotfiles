@@ -21,6 +21,103 @@
         "type": "github"
       }
     },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "generalLib": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "dir": "lib/general",
+        "lastModified": 1779037482,
+        "narHash": "sha256-vWN6eVSpjXRF0saZ4cO2WvzR3l7Y5kZIDG/jIUETCqc=",
+        "ref": "refs/heads/main",
+        "rev": "3f31e848bf9b22bdf23831a22fb5db7c2fd23576",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/nix-library"
+      },
+      "original": {
+        "dir": "lib/general",
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/nix-library"
+      }
+    },
+    "go-license-collector": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1766588125,
+        "narHash": "sha256-oRyCWUM4ialvjZ/GxgKDs6h5F8ivmGk/ECPexRat/NA=",
+        "owner": "LightJack05",
+        "repo": "go-license-collector",
+        "rev": "e119aecb9697350b03493b434084666ad931b8a1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LightJack05",
+        "repo": "go-license-collector",
+        "type": "github"
+      }
+    },
+    "goLicenseCollectorLib": {
+      "inputs": {
+        "go-license-collector": "go-license-collector",
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "dir": "lib/go-license-collector",
+        "lastModified": 1779037482,
+        "narHash": "sha256-vWN6eVSpjXRF0saZ4cO2WvzR3l7Y5kZIDG/jIUETCqc=",
+        "ref": "refs/heads/main",
+        "rev": "3f31e848bf9b22bdf23831a22fb5db7c2fd23576",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/nix-library"
+      },
+      "original": {
+        "dir": "lib/go-license-collector",
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/nix-library"
+      }
+    },
+    "goShell": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "dir": "shells/go",
+        "lastModified": 1779037482,
+        "narHash": "sha256-vWN6eVSpjXRF0saZ4cO2WvzR3l7Y5kZIDG/jIUETCqc=",
+        "ref": "refs/heads/main",
+        "rev": "3f31e848bf9b22bdf23831a22fb5db7c2fd23576",
+        "revCount": 5,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/nix-library"
+      },
+      "original": {
+        "dir": "shells/go",
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/nix-library"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -62,6 +159,27 @@
         "url": "https://gitea.lightjack.de/LightJack05/hyprmonitormanager"
       }
     },
+    "nixGL": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762090880,
+        "narHash": "sha256-fbRQzIGPkjZa83MowjbD2ALaJf9y6KMDdJBQMKFeY/8=",
+        "owner": "nix-community",
+        "repo": "nixGL",
+        "rev": "b6105297e6f0cd041670c3e8628394d4ee247ed5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixGL",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1786106723,
@@ -78,13 +196,76 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1778869304,
+        "narHash": "sha256-30sZNZoA1cqF5JNO9fVX+wgiQYjB7HJqqJ4ztCDeBZE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1779036279,
+        "narHash": "sha256-Iopg2lE/W7wGMAGYeUG60WfLsQpaSfoKKp525mSfwSY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "044fe6ad3c559cefc4f342b7b692f893441dbeab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1778869304,
+        "narHash": "sha256-30sZNZoA1cqF5JNO9fVX+wgiQYjB7HJqqJ4ztCDeBZE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1778869304,
+        "narHash": "sha256-30sZNZoA1cqF5JNO9fVX+wgiQYjB7HJqqJ4ztCDeBZE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d233902339c02a9c334e7e593de68855ad26c4cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
         "nixpkgs": [
           "nixpkgs"
         ],
-        "systems": "systems"
+        "systems": "systems_2"
       },
       "locked": {
         "lastModified": 1785763201,
@@ -104,8 +285,10 @@
       "inputs": {
         "home-manager": "home-manager",
         "hyprmonitormanager": "hyprmonitormanager",
+        "nixGL": "nixGL",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "snx": "snx",
         "tmux-git-cloner": "tmux-git-cloner",
         "tmux-git-finder": "tmux-git-finder",
         "tmux-nix-finder": "tmux-nix-finder",
@@ -113,7 +296,45 @@
         "tmux-sessionizer": "tmux-sessionizer"
       }
     },
+    "snx": {
+      "inputs": {
+        "generalLib": "generalLib",
+        "goLicenseCollectorLib": "goLicenseCollectorLib",
+        "goShell": "goShell",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786281514,
+        "narHash": "sha256-Ee9OtsFAkkF0B6S4CBGf4J3pm2hO7wJ3BayJsYHyjiQ=",
+        "ref": "refs/heads/main",
+        "rev": "d24762e6f656e4775e4e4eb2565a47ecad71e2d2",
+        "revCount": 11,
+        "type": "git",
+        "url": "https://github.com/LightJack05/snx"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/LightJack05/snx"
+      }
+    },
     "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
       "locked": {
         "lastModified": 1774449309,
         "narHash": "sha256-brhZ8DmuGtzkCYHJg4HEd602amKm89Y9ytsFZ5uWD1w=",

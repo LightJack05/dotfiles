@@ -37,6 +37,17 @@
       url = "git+https://gitea.lightjack.de/LightJack05/hyprmonitormanager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    snx = {
+      url = "git+https://github.com/LightJack05/snx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # nixGL: run nix-built GPU apps against the host's GL/EGL drivers on
+    # non-NixOS systems (Arch/Ubuntu/...). Only used on the standalone path.
+    nixGL = {
+      url = "github:nix-community/nixGL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -57,6 +68,9 @@
         nix-finder = inputs.tmux-nix-finder.packages.${system}.default;
         git-cloner = inputs.tmux-git-cloner.packages.${system}.default;
       };
+
+      # snx: packaged from its own flake input (not in nixpkgs).
+      snx = inputs.snx.packages.${system}.default;
     in
     {
       # For consumption from other flakes (e.g. your NixOS config).
@@ -67,13 +81,19 @@
       #   home-manager switch --flake .#default --impure
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit tmuxScripts; };
+        extraSpecialArgs = { inherit tmuxScripts snx; };
         modules = [
           nixvim.homeModules.nixvim
           ./home.nix
           {
             home.username = username;
             home.homeDirectory = homeDirectory;
+
+            # Non-NixOS: enable home-manager's nixGL integration so
+            # config.lib.nixGL.wrap routes GPU apps through the host drivers.
+            # defaultWrapper defaults to "mesa" (nixGLIntel — drives AMD too).
+            # On NixOS this is left unset, so lib.nixGL.wrap is a no-op.
+            targets.genericLinux.nixGL.packages = inputs.nixGL.packages;
           }
         ];
       };
