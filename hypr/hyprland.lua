@@ -2,7 +2,8 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("HYPRCURSOR_THEME", "default")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("LADSPA_PATH", "/usr/lib/ladspa")
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("QT_QPA_PLATFORMTHEME", "kde")
+hl.env("QT_STYLE_OVERRIDE", "breeze")
 hl.env("XCURSOR_SIZE", "24")
 
 hl.config({
