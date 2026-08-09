@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DIRNAME=$(date -I)
+
+mkdir $DIRNAME
+touch $DIRNAME/notes.md $DIRNAME/feedback.md $DIRNAME/prep.md
+
+cd $DIRNAME

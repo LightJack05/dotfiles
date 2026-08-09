@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+set -euxo pipefail
+
+sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
