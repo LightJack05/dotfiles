@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, hyprmonitormanager, ... }:
 
 let
   configsDir = ./configs;
@@ -31,11 +31,13 @@ in
   # (Existing tracked configs are read-only symlinks; edit them here, not at
   # runtime.)
   #
-  # The `hyprmonitormanager` binary itself is installed via packages.nix.
   xdg.configFile = lib.listToAttrs (
     map (rel: {
       name = "hyprmonitormanager/configs/${rel}";
       value.source = configsDir + "/${rel}";
     }) files
   );
+
+  # The daemon/binary comes from its own flake input (passed via extraSpecialArgs).
+  home.packages = [ hyprmonitormanager ];
 }

@@ -1,8 +1,7 @@
-{ ... }:
+{ pkgs, config, ... }:
 
 {
-  # swaync config, deployed verbatim (portable). The `swaynotificationcenter`
-  # package (`swaync`) is installed via packages.nix.
+  # swaync config, deployed verbatim (portable).
   #
   # Note: the config file keeps its original name (swaync.json). swaync's own
   # default config path is ~/.config/swaync/config.json — if you rely on the
@@ -11,4 +10,7 @@
     "swaync/swaync.json".source = ./swaync.json;
     "swaync/style.css".source = ./style.css;
   };
+
+  # swaync (`swaynotificationcenter`) is GPU-accelerated → nixGL-wrapped.
+  home.packages = [ (config.lib.nixGL.wrap pkgs.swaynotificationcenter) ];
 }

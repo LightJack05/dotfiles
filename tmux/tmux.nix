@@ -1,4 +1,4 @@
-{ tmuxScripts, ... }:
+{ pkgs, tmuxScripts, ... }:
 
 let
   # Keep tmux.conf as the single, human-readable source of truth (still a plain
@@ -27,4 +27,6 @@ in
     "tmux/tmux.conf".text = tmuxConf;
     "tmux/theme.conf".source = ./theme.conf;
   };
+
+  home.packages = [ pkgs.tmux ];
 }
