@@ -1,4 +1,4 @@
-{ pkgs, config, snx, ... }:
+{ pkgs, config, snx, hyprmonitormanager, ... }:
 let
   # home-manager's nixGL wrapper. Identity (no-op) when
   # targets.genericLinux.nixGL.packages is unset (e.g. on NixOS); a real nixGL
@@ -16,10 +16,15 @@ in
       # Emoji picker (wofi-based). Self-contained: hardcodes its own wofi/
       # wtype/wl-clipboard, so it needs no PATH deps and no nixGL wrapping.
       wofi-emoji
+
+      hypridle
+      cliphist
+      wl-clipboard
     ])
     ++ [
       # From flake inputs (not in nixpkgs)
       snx
+      hyprmonitormanager
     ]
     # GPU-accelerated GUI apps — wrapped so they find the host drivers.
     ++ map gl (with pkgs; [
@@ -27,5 +32,14 @@ in
       swaynotificationcenter # provides `swaync`
       waybar
       wofi
+      hyprlock
+      hyprpicker
+      thunar
+      tumbler
+      firefox
+      satty
+      grim
+      slurp
+      playerctl
     ]);
 }

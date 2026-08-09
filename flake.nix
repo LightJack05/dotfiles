@@ -71,6 +71,9 @@
 
       # snx: packaged from its own flake input (not in nixpkgs).
       snx = inputs.snx.packages.${system}.default;
+
+      # hyprmonitormanager: packaged from its own flake input (not in nixpkgs).
+      hyprmonitormanager = inputs.hyprmonitormanager.packages.${system}.default;
     in
     {
       # For consumption from other flakes (e.g. your NixOS config).
@@ -81,7 +84,7 @@
       #   home-manager switch --flake .#default --impure
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit tmuxScripts snx; };
+        extraSpecialArgs = { inherit tmuxScripts snx hyprmonitormanager; };
         modules = [
           nixvim.homeModules.nixvim
           ./home.nix

@@ -12,6 +12,8 @@
     ./swaync/swaync.nix
     ./waybar/waybar.nix
     ./wofi/wofi.nix
+    ./hypr/hypr.nix
+    ./hyprmonitormanager/hyprmonitormanager.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's
