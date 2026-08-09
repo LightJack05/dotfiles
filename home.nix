@@ -15,6 +15,7 @@
     ./hypr/hypr.nix
     ./hyprmonitormanager/hyprmonitormanager.nix
     ./git/git.nix
+    ./ssh/ssh.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's

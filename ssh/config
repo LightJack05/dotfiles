@@ -1,0 +1,33 @@
+Host storagebox
+    Port 23
+    Hostname u463857.your-storagebox.de
+    User u463857
+    IdentityFile ~/.ssh/id_ed25519
+
+Host *
+  SetEnv TERM=xterm-256color
+
+Host Backupserver
+    Port 22
+    Hostname backupserver.lightjack.lan
+    User root
+
+Host gitea.lightjack.de
+    Port 22
+    Hostname lightjack.de
+    IdentityFile ~/.ssh/id_ed25519_gitea_lightjack_de
+
+Host terraform-controller.lightjack.lan
+    User root
+
+Host meme-pi
+    Port 22
+    Hostname 10.5.255.226
+    User root
+    IdentityFile ~/.ssh/id_ed25519_raspi
+
+Host nginx-reverse-proxy
+    Port 22
+    Hostname 10.32.0.11
+    User root
+    IdentityFile ~/.ssh/id_ed25519
