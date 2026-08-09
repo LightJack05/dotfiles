@@ -14,6 +14,7 @@
     ./wofi/wofi.nix
     ./hypr/hypr.nix
     ./hyprmonitormanager/hyprmonitormanager.nix
+    ./git/git.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's
