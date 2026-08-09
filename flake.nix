@@ -8,10 +8,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    { nixpkgs, home-manager, nixvim, ... }:
     let
       # Only used by the standalone (non-NixOS) path below.
       username = builtins.getEnv "USER";
@@ -29,6 +34,7 @@
       homeConfigurations.default = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          nixvim.homeModules.nixvim
           ./home.nix
           {
             home.username = username;

@@ -5,6 +5,7 @@
     ./packages.nix
     ./zsh/zsh.nix
     ./tmux/tmux.nix
+    ./nvim/nvim.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's
