@@ -42,6 +42,26 @@
         "type": "github"
       }
     },
+    "hyprmonitormanager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786279828,
+        "narHash": "sha256-VLCN+WKzmBzxqY/SOBaCWTLCFYRaGb2LWH273feYIkU=",
+        "ref": "refs/heads/main",
+        "rev": "735971d4137695b8b0d1bbc6dbc03cd1ecaec1d7",
+        "revCount": 13,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/hyprmonitormanager"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/hyprmonitormanager"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1786106723,
@@ -83,8 +103,14 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "hyprmonitormanager": "hyprmonitormanager",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "tmux-git-cloner": "tmux-git-cloner",
+        "tmux-git-finder": "tmux-git-finder",
+        "tmux-nix-finder": "tmux-nix-finder",
+        "tmux-scratchpad": "tmux-scratchpad",
+        "tmux-sessionizer": "tmux-sessionizer"
       }
     },
     "systems": {
@@ -101,6 +127,106 @@
         "ref": "future-26.11",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "tmux-git-cloner": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786279158,
+        "narHash": "sha256-q5UCYl38ycuFo8ZXt+GzELEZdH2UcRV+b1vOdo4AP3Q=",
+        "ref": "refs/heads/main",
+        "rev": "fda89c3dd2bf5acb63aaf5a3e5584ceb8f232626",
+        "revCount": 29,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-git-cloner"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-git-cloner"
+      }
+    },
+    "tmux-git-finder": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786279158,
+        "narHash": "sha256-UOlcDjy3UXE+Nd8WG/WvyLy2td/Dq8QmZ0KNjQXOd88=",
+        "ref": "refs/heads/main",
+        "rev": "62dea58fd0bd3351457b5366036cdbd9d3bd8ce7",
+        "revCount": 9,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-git-finder"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-git-finder"
+      }
+    },
+    "tmux-nix-finder": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786279158,
+        "narHash": "sha256-dILfGPl5kI7LzSLBKdWkWskRtrCHxYcMlyfwlP/YFZw=",
+        "ref": "refs/heads/main",
+        "rev": "d381fed8abdb753d0e826adc4208bba70cce103e",
+        "revCount": 14,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-nix-finder"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-nix-finder"
+      }
+    },
+    "tmux-scratchpad": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786279158,
+        "narHash": "sha256-eJhDxZ7VS9cn5krjmJzx62PuYLYBFZ9DOFBGlT4hkYM=",
+        "ref": "refs/heads/main",
+        "rev": "e0b95d31f964d181067113a79b377879167f97fd",
+        "revCount": 9,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-scratchpad"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-scratchpad"
+      }
+    },
+    "tmux-sessionizer": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786279158,
+        "narHash": "sha256-rmN08qPQGXsuhkeYJkqLi5lk7qckW+SLn66LzW5wj84=",
+        "ref": "refs/heads/master",
+        "rev": "e98f752d03b53fc84d05bd4ccda0d0dbdf064618",
+        "revCount": 33,
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-sessionizer"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.lightjack.de/LightJack05/tmux-sessionizer"
       }
     }
   },
