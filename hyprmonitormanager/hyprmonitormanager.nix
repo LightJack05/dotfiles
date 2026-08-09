@@ -1,4 +1,9 @@
-{ lib, hyprmonitormanager, ... }:
+{
+  pkgs,
+  lib,
+  hyprmonitormanager,
+  ...
+}:
 
 let
   configsDir = ./configs;
@@ -39,5 +44,8 @@ in
   );
 
   # The daemon/binary comes from its own flake input (passed via extraSpecialArgs).
-  home.packages = [ hyprmonitormanager ];
+  home.packages = [
+    hyprmonitormanager
+    pkgs.nwg-displays
+  ];
 }
