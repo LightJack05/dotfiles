@@ -17,6 +17,7 @@
     ./git/git.nix
     ./ssh/ssh.nix
     ./theme/theme.nix
+    ./mime-apps/mime-apps.nix
   ];
 
   # home.username / home.homeDirectory are supplied by the flake's
