@@ -21,11 +21,6 @@ local function path_exists(p)
     return false
 end
 
-local function dir_exists(p)
-    local ok = os.execute('test -d "' .. p .. '"')
-    return ok == true or ok == 0
-end
-
 -- 10-bit screen capture. Forcing RGBA10 yields 10-bit/HDR screencasts but breaks
 -- screensharing in apps that can't negotiate 10-bit. It's the only genuinely
 -- machine-specific setting, so rather than a per-device config we opt in locally:
@@ -34,10 +29,6 @@ end
 if path_exists(home .. "/.config/hypr/enable-10bit-capture") then
     hl.env("PIPEWIRE_CAPTURE_FORMAT", "RGBA10")
 end
-
--- Wallpapers live outside this repo (a separate multi-GB submodule) and may be
--- absent on some machines (e.g. headless). See hyprpaper.conf for the path.
-local wallpaper_dir = home .. "dotfiles/Wallpapers/Kurzgesagt"
 
 -- display.lua is generated at runtime by hyprmonitormanager.
 require("display")
@@ -52,9 +43,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swaync -c ~/.config/swaync/swaync.json -s ~/.config/swaync/style.css")
     hl.exec_cmd("nm-applet --indicator")
     hl.exec_cmd("hypridle")
-    if dir_exists(wallpaper_dir) then
-        hl.exec_cmd("hyprpaper")
-    end
+    hl.exec_cmd("stat $HOME/dotfiles/Wallpapers/Kurzgesagt && hyprpaper")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
     hl.exec_cmd("easyeffects --gapplication-service")
     hl.exec_cmd("hyprmonitormanager daemon")
@@ -182,7 +171,7 @@ hl.gesture({
 
 hl.config({
     misc = {
-        force_default_wallpaper = 1,
+        force_default_wallpaper = 2,
         animate_manual_resizes  = true,
     },
 })
