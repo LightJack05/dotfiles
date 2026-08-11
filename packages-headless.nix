@@ -6,6 +6,7 @@
       jq
       _7zz
       android-tools
+      brightnessctl # XF86MonBrightness keybinds (hypr)
       calf
       cowsay
       claude-code
