@@ -29,7 +29,9 @@ in
       # Hyprland ecosystem
       hyprlock # lock_cmd + lock keybinds
       hyprpicker # SUPER+x color picker
-      hyprpolkitagent # polkit agent (note: autostart currently execs /usr/lib path)
+      hyprpaper
+      hyprpolkitagent # polkit agent (run via the systemd user service below)
+      xdg-desktop-portal-hyprland
       # Screenshot pipeline (Print: grim | slurp | satty)
       grim
       slurp
@@ -45,4 +47,21 @@ in
       cliphist # clipboard history (autostart + SUPER+V)
       wl-clipboard # wl-copy / wl-paste (clipboard + color picker)
     ]);
+
+  # The hyprpolkitagent package only ships its binary in libexec/ and its unit
+  # in the nix profile, which standalone home-manager doesn't add to systemd's
+  # user unit search path. Defining the service here writes it to
+  # ~/.config/systemd/user (which is on the path) and points at the real
+  # binary; hyprland.start execs `systemctl --user start hyprpolkitagent`.
+  systemd.user.services.hyprpolkitagent = {
+    Unit = {
+      Description = "Hyprland Polkit authentication agent";
+      PartOf = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+      Restart = "on-failure";
+    };
+  };
 }
