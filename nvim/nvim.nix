@@ -71,6 +71,7 @@
 
   # Global LSPs
   home.packages = with pkgs; [
+    ripgrep # for telescope
     nil
     nixfmt # nix formatter (`nixfmt`); nixfmt-rfc-style is now an alias for this
     lua-language-server

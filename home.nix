@@ -3,6 +3,7 @@
 {
   imports = [
     ./packages.nix
+    ./packages-headless.nix
     ./zsh/zsh.nix
     ./tmux/tmux.nix
     ./tmux-scripts/tmux-scripts.nix
