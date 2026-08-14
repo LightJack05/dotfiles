@@ -24,6 +24,7 @@ require("config.neogen")
 require("config.indent-blankline")
 require("config.indent-scope")
 require("config.signatureHelp")
+require("config.ansible")
 
 -- ===================
 -- Completion & snippets

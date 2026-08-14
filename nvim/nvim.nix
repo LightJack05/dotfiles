@@ -10,7 +10,20 @@ let
   # so a server is only activated when it is provided globally (see
   # `home.packages`) or by the dev shell nvim was launched in.
   lspServers = {
-    ansiblels = { };
+    # Ansible. Attaches to the `yaml.ansible` filetype only, which neovim does
+    # not set on its own — lua/config/ansible.lua handles that detection.
+    # Roles are frequently edited standalone, without an `ansible.cfg` or
+    # `.ansible-lint` anywhere above them, so fall back to the repo root; the
+    # nested lists express priority (closest ansible marker beats `.git`).
+    ansiblels.root_markers = [
+      [
+        "ansible.cfg"
+        ".ansible-lint"
+        "galaxy.yml"
+      ]
+      [ ".git" ]
+    ];
+
     bashls = { };
     biome = { };
     clangd = { };
@@ -133,6 +146,7 @@ in
       "lua/config/indent-blankline.lua".source = ./lua/config/indent-blankline.lua;
       "lua/config/indent-scope.lua".source = ./lua/config/indent-scope.lua;
       "lua/config/signatureHelp.lua".source = ./lua/config/signatureHelp.lua;
+      "lua/config/ansible.lua".source = ./lua/config/ansible.lua;
       "lua/config/nvim-cmp.lua".source = ./lua/config/nvim-cmp.lua;
       "lua/config/luasnip.lua".source = ./lua/config/luasnip.lua;
       "lua/config/dap.lua".source = ./lua/config/dap.lua;
