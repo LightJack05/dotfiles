@@ -1,5 +1,6 @@
 -- Load order for the nvim config. Plugins themselves are installed by nix
 -- (see nvim/nvim.nix) — there is no plugin manager and no runtime fetching.
+-- LSP servers are likewise configured from nix, via nixvim's `lsp.servers`.
 
 -- ===================
 -- Core editor settings and keymaps
@@ -29,11 +30,6 @@ require("config.signatureHelp")
 -- ===================
 require("config.nvim-cmp")
 require("config.luasnip")
-
--- ===================
--- LSP setup
--- ===================
-require("config.lsp")
 
 -- ===================
 -- Debugging
