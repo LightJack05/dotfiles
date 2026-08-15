@@ -27,7 +27,6 @@ in
   home.packages =
     (map gl (with pkgs; [
       # Hyprland ecosystem
-      hyprlock # lock_cmd + lock keybinds
       hyprpicker # SUPER+x color picker
       hyprpaper
       hyprpolkitagent # polkit agent (run via the systemd user service below)
