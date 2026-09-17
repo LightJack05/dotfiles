@@ -14,7 +14,6 @@ in
         easyeffects
         kdePackages.filelight
         gimp
-        gparted
         gnome-calculator
         gnome-keyring
         krita
