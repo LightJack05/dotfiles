@@ -32,7 +32,6 @@ in
         pdfarranger
         seahorse
 
-        steam
         system-config-printer
         tor-browser
       ]
