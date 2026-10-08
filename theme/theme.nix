@@ -61,11 +61,19 @@ in
       gtk-xft-rgba = "rgb";
       gtk-sound-theme-name = "ocean";
     };
-    gtk4.extraConfig = {
+    gtk4 = {
+     theme.name = "Adwaita-dark";
+     extraConfig = {
       gtk-application-prefer-dark-theme = 1;
       gtk-cursor-theme-name = "default";
       gtk-cursor-theme-size = 24;
+     };
     };
+  };
+
+  dconf.settings."org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
+    accent-color = "purple";
   };
 
   # ── Qt 5/6 + KDE apps ───────────────────────────────────────────────────────

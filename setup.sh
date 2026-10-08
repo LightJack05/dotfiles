@@ -10,3 +10,6 @@ mkdir -p ~/.config/nix
 cat << EOF > ~/.config/nix/nix.conf
 experimental-features = nix-command flakes
 EOF
+
+sudo nix-channel --add https://channels.nixos.org/nixpkgs-unstable
+sudo nix-channel --update
