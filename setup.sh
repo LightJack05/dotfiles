@@ -1,6 +1,8 @@
 #/usr/bin/env bash
 set -euxo pipefail
 
+cd /home/LightJack05/dotfiles/
+
 sudo cp -rv ./root/* /
 
 mkdir -p ~/.config/nix
