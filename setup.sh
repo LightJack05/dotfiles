@@ -9,3 +9,4 @@ cat << EOF > ~/.config/nix/nix.conf
 experimental-features = nix-command flakes
 EOF
 
+./apply.sh
