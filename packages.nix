@@ -25,7 +25,6 @@ in
         libreoffice-fresh
 
         blueman # blueman-manager — waybar bluetooth on-click
-        networkmanagerapplet # nm-applet — hyprland autostart tray
         openrgb
         paprefs
         pavucontrol
