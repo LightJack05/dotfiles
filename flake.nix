@@ -14,27 +14,27 @@
     };
 
     tmux-git-finder = {
-      url = "git+https://gitea.lightjack.de/LightJack05/tmux-git-finder";
+      url = "git+https://github.com/LightJack05/tmux-git-finder";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tmux-sessionizer = {
-      url = "git+https://gitea.lightjack.de/LightJack05/tmux-sessionizer";
+      url = "git+https://github.com/LightJack05/tmux-sessionizer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tmux-scratchpad = {
-      url = "git+https://gitea.lightjack.de/LightJack05/tmux-scratchpad";
+      url = "git+https://github.com/LightJack05/tmux-scratchpad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tmux-nix-finder = {
-      url = "git+https://gitea.lightjack.de/LightJack05/tmux-nix-finder";
+      url = "git+https://github.com/LightJack05/tmux-nix-finder";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tmux-git-cloner = {
-      url = "git+https://gitea.lightjack.de/LightJack05/tmux-git-cloner";
+      url = "git+https://github.com/LightJack05/tmux-git-cloner";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprmonitormanager = {
-      url = "git+https://gitea.lightjack.de/LightJack05/hyprmonitormanager";
+      url = "git+https://github.com/LightJack05/hyprmonitormanager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     snx = {

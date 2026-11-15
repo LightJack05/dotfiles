@@ -12,4 +12,4 @@ I am perfectly happy to remove anything from this repo if it causes inconvenienc
 ## How does it look?
 Like this:
 
-<img width="1280" height="720" alt="image" src="https://gitea.lightjack.de/LightJack05/dotfiles/raw/branch/main/screenshots/screenshot.png" />
+<img width="1280" height="720" alt="image" src="https://github.com/LightJack05/dotfiles/raw/branch/main/screenshots/screenshot.png" />
