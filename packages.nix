@@ -8,6 +8,8 @@ in
       with pkgs;
       [
         firefox
+        google-chrome
+        antigravity-ide
         audacity
         blender
         kdePackages.ark

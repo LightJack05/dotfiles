@@ -10,6 +10,7 @@
       calf
       cowsay
       claude-code
+      antigravity-cli
       dmidecode
       fastfetch
       figlet
