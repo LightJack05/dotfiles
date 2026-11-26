@@ -35,5 +35,6 @@
   # shell sources it, see README note).
   home.sessionVariables = {
     EDITOR = "nvim";
+    BROWSER = "google-chrome-stable";
   };
 }

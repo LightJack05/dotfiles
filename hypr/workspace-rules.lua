@@ -1,10 +1,10 @@
 local on_created_empty = {
     ["special:magic"] = "kitty",
-    ["1"] = "firefox",
-    ["2"] = "firefox https://discord.com/channels/@me https://web.whatsapp.com https://mail.google.com",
-    ["3"] = "firefox https://calendar.google.com https://tasks.google.com https://contacts.google.com",
+    ["1"] = "google-chrome-stable --new-window",
+    ["2"] = "google-chrome-stable --new-window https://discord.com/channels/@me https://web.whatsapp.com https://mail.google.com",
+    ["3"] = "google-chrome-stable --new-window https://calendar.google.com https://tasks.google.com https://contacts.google.com",
     ["4"] = [[kitty /usr/bin/zsh -c "/usr/bin/zsh -c \"tmux a || tmux new-session -s home \""]],
-    ["5"] = "firefox https://github.com https://gitea.lightjack.de",
+    ["5"] = "google-chrome-stable --new-window https://github.com https://gitea.lightjack.de",
 }
 
 hl.on("workspace.created", function(ws)

@@ -1,4 +1,5 @@
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
+hl.env("BROWSER", "google-chrome-stable")
 hl.env("HYPRCURSOR_THEME", "default")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("LADSPA_PATH", "/usr/lib/ladspa")

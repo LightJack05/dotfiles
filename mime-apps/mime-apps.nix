@@ -1,7 +1,10 @@
 { ... }:
 
 {
-  # Deploy the kitty config verbatim (portable plain-text config); home-manager
-  # only symlinks it into ~/.config/kitty.
-  xdg.configFile."mime-apps.list".source = ./mime-apps.list;
+  # Deploy mimeapps.list verbatim into ~/.config/mimeapps.list (XDG spec name).
+  # force = true avoids activation failures if an app/xdg-mime created one first.
+  xdg.configFile."mimeapps.list" = {
+    source = ./mime-apps.list;
+    force = true;
+  };
 }
