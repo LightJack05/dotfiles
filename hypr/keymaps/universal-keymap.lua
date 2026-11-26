@@ -4,7 +4,7 @@ function M.setup()
     local terminal    = "kitty"
     local fileManager = "thunar"
     local menu        = "killall -r '.*wofi.*'; wofi --insensitive --show drun -I -a"
-    local browser     = "google-chrome-stable"
+    local browser     = "firefox"
     local lockscreen  = "pidof hyprlock || hyprlock"
     local notificationAgent  = "swaync-client -t"
     local colorpicker        = "hyprpicker | wl-copy"
